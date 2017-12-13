@@ -1,0 +1,171 @@
+
+body, html {
+    overflow-x: hidden;
+
+    font-family:  Roboto,Helvetica Neue,sans-serif;
+    line-height: 1.7;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+.list {        
+    position: relative;
+    z-index: 1;
+
+    margin-top: 80vh;
+
+    transition: transform 0.5s;    
+}
+
+.list--off-canvas {
+    transform: translateX(100%);
+}
+
+.list__item {
+
+    padding: 1.5em 1em;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    cursor: pointer;
+
+    transition: background-color 0.15s;
+}
+
+.list__item:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.list__item:before, 
+.list__item:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.list__item__image {
+    width: 200px;
+    float: left;
+}
+
+.list__item__description {
+    position: relative;
+
+    margin-left: 220px;
+    padding-right: 2em;
+}
+
+.list__item__title {
+    margin-bottom: 0.2em;
+
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 0;
+    right: 0;
+
+    transition: opacity 0.3s 0s;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar--on {
+    transition: opacity 0.3s 0.6s;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar__item {
+    display: inline-block;
+
+    padding: 0.3em 1em;    
+
+    font-size: 1.6em;
+    color: black;
+
+    background: rgba(255, 255, 255, 0.9);
+    transition: background 0.15s;
+
+    cursor: pointer;
+    text-decoration: none;    
+}     
+
+.navbar__item:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar__item:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0 8px 8px 0;  
+}
+
+.navbar__item:first-child {
+    border-radius: 8px 0 0 8px;  
+}
+
+.content__image {
+    float: left;
+    width: 48%;
+}
+
+.content__description {
+    margin-left: 52%;
+}
+
+.content__title {
+    margin-bottom: 0.5em;
+
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.map {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#map {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+.size-full {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    body, html {
+        font-size: 0.9em;
+    }
+
+    .list__item__image, 
+    .content__image {
+        width: auto;
+        float: none;
+    }
+
+    .list__item__description, 
+    .content__description {
+        margin-left: auto;
+    }
+}
