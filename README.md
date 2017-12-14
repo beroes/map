@@ -1,1 +1,3 @@
 # map
+
+I decided to use fixed positioned full-screen map and relatively positioned list with items. Click on an item triggers the off-canvas navigation pattern. Back button appears - this is a standard behavior for sub-menu navigation. User can always return back to the main navigation with a click on the back button. After the navigation is off the screen the requested object is being centered on the map. Such functionality allows for infinite longer lists to be scrolled over the map. By click on the info button next to the back button a modal window containing the description is being shown. I believe this is one of the easiest and straightforward ways to present objects with exact location. 
