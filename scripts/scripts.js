@@ -12,10 +12,16 @@
             $('.navbar').removeClass('navbar--on');
         });
         
-        $('.info-trigger').colorbox({
-            inline:true, 
-            width:"80%", 
-            transition:"fade"
+        document.querySelector('.info-trigger').addEventListener('click', function() {
+            document.querySelector('.overlay').classList.add('overlay--active');
+        });
+    
+        document.querySelector('.overlay').addEventListener('click', function() {
+            this.classList.remove('overlay--active');
+        });
+    
+        document.querySelector('.info-window .content').addEventListener('click', function(event) {
+            event.stopPropagation();
         });
     });
 

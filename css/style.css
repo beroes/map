@@ -117,22 +117,6 @@ a:active {
     border-radius: 8px 0 0 8px;  
 }
 
-.content__image {
-    float: left;
-    width: 48%;
-}
-
-.content__description {
-    margin-left: 52%;
-}
-
-.content__title {
-    margin-bottom: 0.5em;
-
-    font-size: 1.6em;
-    font-weight: bold;
-}
-
 .map {
     position: fixed;
 
@@ -153,7 +137,72 @@ a:active {
     max-width: 100%;
 }
 
-@media screen and (max-width: 640px) {
+
+/* Modal window*/
+
+.overlay {
+    position: fixed;
+    
+    z-index: 10;
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    background: rgba(255, 255, 255, 0.8);
+    
+    transition: opacity 0.3s;
+    
+    visibility: hidden;
+    opacity: 0;    
+}
+
+.overlay--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.info-window {
+    position: relative;
+    
+    width: 80%;
+    max-width: 860px;
+    
+    height: 100%;
+    
+    margin: auto;
+}
+
+.content {
+    position: absolute;
+    
+    top: 50%;
+    
+    padding: 40px;
+    
+    transform: translateY(-50%);   
+}
+
+.content__image {
+    float: left;
+    width: 48%;
+}
+
+.content__description {
+    margin-left: 52%;
+}
+
+.content__title {
+    margin-bottom: 0.5em;
+
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 640px) {
     body, html {
         font-size: 0.9em;
     }
